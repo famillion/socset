@@ -1,0 +1,32 @@
+.wrapper{
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,2fr);
+    align-content: center;
+    align-items: center;
+}
+
+.logo{
+    grid-column-start: 1;
+    justify-self: end;
+    padding-right: 10px;
+}
+
+.logo img{
+    width: 30px;
+}
+
+.search{
+    display: flex;
+    padding-left: 10px;
+}
+
+.search input{
+    border: none;
+    outline: none;
+}
+
+.logout{
+    grid-column-start: 4;
+    justify-self: end;
+}
