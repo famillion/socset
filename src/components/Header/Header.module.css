@@ -27,6 +27,12 @@
 }
 
 .logout{
+    color: aqua;
+    display: flex;
     grid-column-start: 4;
     justify-self: end;
+}
+
+.logout button{
+    margin-left: 20px;
 }

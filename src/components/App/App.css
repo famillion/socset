@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+.app-header, .app-footer {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 15px;
+}
+
+.app-wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows:    50px auto 40px;
+    grid-template-columns: repeat(5, 2fr);
+}
+
+.app-header {
+    background-color: blue;
+    grid-column: 1/span 5;
+}
+
+.app-header-fix {
+    position: fixed;
+     background-color: blue;
+     width: 100%;
+    height: 50px;
+    z-index: 1;
+ }
+
+.app-content {
+    grid-column: 2/span 3;
+}
+
+.app-footer {
+    background-color: black;
+    grid-column: 1/span 5;
+}

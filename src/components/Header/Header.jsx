@@ -15,6 +15,9 @@ const Header = () => {
         <button>search</button>
       </div>
       <div className={logout}>
+        <div>
+          Home
+        </div>
         <button>logout</button>
       </div>
     </div>
