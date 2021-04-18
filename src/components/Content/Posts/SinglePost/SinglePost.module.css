@@ -1,0 +1,66 @@
+.wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 65px min-content 50px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+    border-radius: 10px;
+    grid-gap: 5px;
+}
+
+.author{
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 100px repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+.avatar{
+    width: 50px;
+    height: 50px;
+    grid-column: 1;
+    align-self: center;
+    justify-self: center;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 110%;
+}
+
+.name{
+    align-self: center;
+    color: #030326;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.timeDate{
+    align-self: center;
+    justify-self: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: #41418d;
+    font-style: italic;
+}
+
+.post{
+    width: 80%;
+    justify-self: center;
+    font-size: 18px;
+    padding: 10px;
+    border-top: 1px solid #04b58d;
+    border-bottom: 1px solid #04b58d;
+}
+
+.footer{
+    align-self: center;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+}
+
+.btns{
+    grid-column: 2;
+    justify-self: end;
+}
