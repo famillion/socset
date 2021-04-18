@@ -15,8 +15,7 @@ const FollowersPanel = () => {
 
         <FollowersPanelItem/>
         <FollowersPanelItem/>
-        <FollowersPanelItem/>
-        <FollowersPanelItem/>
+
 
       </div>
     </div>

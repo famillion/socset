@@ -7,10 +7,12 @@
 }
 
 .app-wrapper {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-rows:    50px auto 50px;
     justify-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,0.8) 0%, rgba(210,242,255,1) 29%, rgba(0,212,255,1) 100%);
 }
 
 .app-header {
