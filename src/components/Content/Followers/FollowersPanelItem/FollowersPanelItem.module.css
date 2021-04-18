@@ -1,0 +1,24 @@
+.wrapper{
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+    border-radius: 10px;
+}
+
+.wrapper img{
+    max-width: 70px;
+}
+
+.name{
+    color: #2f211b;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    grid-row-start: 2;
+}
+
+.avatar{
+    display: flex;
+    justify-content: center;
+}

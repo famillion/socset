@@ -1,15 +1,21 @@
 .wrapper{
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    width: 850px;
     display: grid;
-    grid-template-columns: repeat(5,2fr);
-    align-content: center;
+    grid-template-columns: 50px 1fr 1fr;
+    grid-gap: 10px;
     align-items: center;
 }
 
 .logo{
     grid-column-start: 1;
-    justify-self: end;
-    padding-right: 10px;
+    justify-self: center;
 }
 
 .logo img{
@@ -29,10 +35,15 @@
 .logout{
     color: aqua;
     display: flex;
-    grid-column-start: 4;
+    grid-column-start: 3;
     justify-self: end;
 }
 
 .logout button{
     margin-left: 20px;
+}
+
+.nav a{
+    color: #6decec;
+    text-decoration: none;
 }

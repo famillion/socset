@@ -20,31 +20,8 @@
     grid-row-start: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(auto-fit, 120px);
     grid-gap: 5px;
     justify-content: center;
     align-items: center;
-}
-
-.followersItem{
-    justify-self: center;
-    align-self: center;
-}
-
-.followersItem img{
-    max-width: 70px;
-}
-
-.followerName{
-    margin-bottom: 10px;
-    color: #2f211b;
-    text-align: center;
-    font-size: 12px;
-    font-weight: bold;
-    grid-row-start: 2;
-}
-
-.fAva{
-    display: flex;
-    justify-content: center;
 }

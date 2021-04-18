@@ -14,7 +14,7 @@
     grid-row: 1;
     grid-column: 1/span 2;
     display: grid;
-    grid-template-rows: 20px 80px 10px;
+    grid-template-rows: 20px min-content 10px;
     grid-template-columns: 20px auto 20px;
 }
 

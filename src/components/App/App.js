@@ -2,10 +2,12 @@ import React from "react";
 import './App.css';
 import Header from "../Header/Header";
 import Homepage from "../Content/Homepage/Homepage";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Posts from "../Content/Posts/Posts";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <div className="app-header-fix">
         <Header/>
       </div>
@@ -13,13 +15,16 @@ function App() {
         <div className="app-header">
         </div>
         <div className="app-content">
-          <Homepage/>
+          <Switch>
+            <Route path='/posts' component={Posts}/>
+            <Route path='/' component={Homepage}/>
+          </Switch>
         </div>
         <div className="app-footer">
-
+          footer
         </div>
       </div>
-    </div>
+    </BrowserRouter>
 
   );
 }

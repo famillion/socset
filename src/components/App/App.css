@@ -7,15 +7,15 @@
 }
 
 .app-wrapper {
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
-    grid-template-rows:    50px auto 40px;
-    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows:    50px auto 50px;
+    justify-items: center;
 }
 
 .app-header {
     background-color: blue;
-    grid-column: 1/span 5;
+
 }
 
 .app-header-fix {
@@ -27,10 +27,11 @@
  }
 
 .app-content {
-    grid-column: 2/span 3;
+    width: 850px;
 }
 
 .app-footer {
+    margin-top: 10px;
     background-color: black;
-    grid-column: 1/span 5;
+    width: 100%;
 }
