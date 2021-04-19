@@ -1,4 +1,5 @@
 .wrapper {
+    margin-bottom: 10px;
     width: 100%;
     display: grid;
     grid-template-rows: 50px 1fr;
@@ -18,12 +19,11 @@
     text-decoration: none;
 }
 
-.followers {
+.blockItems {
     margin: 10px 20px;
     grid-row-start: 2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(auto-fit, 120px);
+    grid-template-rows: repeat(auto-fit, min-content);
     grid-gap: 5px;
     justify-content: center;
     align-items: center;

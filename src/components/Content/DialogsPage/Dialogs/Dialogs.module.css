@@ -1,0 +1,20 @@
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 190px min-content;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+}
+
+.header {
+    grid-column: span 2;
+}
+
+.dialogsItems {
+    grid-column: 1;
+}
+
+.messages {
+    grid-column: 2;
+    background-color: #41418d;
+}

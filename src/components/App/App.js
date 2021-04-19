@@ -1,13 +1,14 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 import './App.css';
 import Header from "../Header/Header";
 import Homepage from "../Content/Homepage/Homepage";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Posts from "../Content/Posts/Posts";
+import Dialogs from "../Content/DialogsPage/Dialogs/Dialogs";
 
-function App() {
+const App = (props) => {
   return (
-    <BrowserRouter>
+    <div>
       <div className="app-header-fix">
         <Header/>
       </div>
@@ -16,15 +17,16 @@ function App() {
         </div>
         <div className="app-content">
           <Switch>
-            <Route path='/posts' component={Posts}/>
-            <Route path='/' component={Homepage}/>
+            <Route path='/posts' render={() => <Posts/>}/>
+            <Route path='/dialogs' render={() => <Dialogs/>}/>
+            <Route path='/' render={() => <Homepage/>}/>
           </Switch>
         </div>
         <div className="app-footer">
           footer
         </div>
       </div>
-    </BrowserRouter>
+    </div>
 
   );
 }

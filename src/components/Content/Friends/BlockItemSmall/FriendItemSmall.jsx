@@ -1,9 +1,9 @@
 import React from 'react';
-import classes from './FollowersPanelItem.module.css';
+import classes from './FriendItemSmall.module.css';
 
 const { wrapper, avatar, name } = classes;
 
-const FollowersPanelItem = () => {
+const FriendItemSmall = (props) => {
   return (
     <div className={wrapper}>
       <div className={avatar}>
@@ -16,4 +16,4 @@ const FollowersPanelItem = () => {
   );
 };
 
-export default FollowersPanelItem;
+export default FriendItemSmall;

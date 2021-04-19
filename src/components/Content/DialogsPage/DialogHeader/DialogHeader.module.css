@@ -1,0 +1,27 @@
+.wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 140px 50px;
+    grid-template-columns: 1fr 1fr;
+    background-color: #36d9d9;
+    border-radius: 0 0 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 15px;
+}
+
+.userBlock{
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+}
+
+.userBTNs{
+    grid-column: 2;
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar{
+    grid-row: 2;
+    grid-column: span 2;
+}

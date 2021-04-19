@@ -1,0 +1,21 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, min-content);
+    grid-gap: 5px;
+    justify-items: center;
+
+}
+
+.search{
+    /*grid-column: 1/-1;*/
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.blockItems{
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
