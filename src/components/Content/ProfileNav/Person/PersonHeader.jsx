@@ -1,9 +1,9 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
 import classes from './../ProfileNav.module.css';
 import PersonName from "./PersonName/PersonName";
+import LinkButton from "../../components/LinkButton/LinkButton";
 
-const { header, bg, personOptions, messages, optionsBtns, imageName } = classes;
+const { header, bg, personOptions, imageName, optionsInner } = classes;
 
 const PersonHeader = (props) => {
   return (
@@ -17,11 +17,9 @@ const PersonHeader = (props) => {
         <PersonName/>
       </div>
       <div className={personOptions}>
-        <div className={messages}>
-          <NavLink to='/dialogs'>Messages</NavLink>
-        </div>
-        <div className={optionsBtns}>
-          <button>Settings</button>
+        <div className={optionsInner}>
+          <LinkButton linkBTN={{url:'dialogs', text: 'Messages'}}/>
+          <LinkButton linkBTN={{url:'settings', text: 'Settings'}}/>
         </div>
       </div>
 

@@ -1,0 +1,16 @@
+.messages {
+    width: 90px;
+    height: 30px;
+    background-color: #dcf1f1;
+    border-radius: 4px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+    text-align: center;
+    padding: 3px;
+}
+
+.messages a {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}

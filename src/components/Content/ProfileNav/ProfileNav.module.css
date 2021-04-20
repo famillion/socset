@@ -37,35 +37,15 @@
     grid-row: 2;
 }
 
-.messages {
-    margin: 10px;
-    grid-column: 1;
+.optionsInner {
     grid-row: 3;
-    justify-self: end;
-    background-color: #dcf1f1;
-    width: 80px;
-    height: 25px;
-    border-radius: 4px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
-    text-align: center;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
-.messages a{
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.optionsBtns {
-    margin: 10px;
-    padding-right: 10px;
-    grid-column: 2;
-    grid-row: 3;
-    justify-self: end;
-}
-
-.imageName{
+.imageName {
     grid-row: 2;
     grid-column: 1;
 }

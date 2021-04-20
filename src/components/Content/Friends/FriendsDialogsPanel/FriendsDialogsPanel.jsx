@@ -16,6 +16,8 @@ const FriendsDialogsPanel = (props) => {
         <FriendDialogItem/>
         <FriendDialogItem/>
         <FriendDialogItem/>
+        <FriendDialogItem/>
+
       </div>
     </div>
   );
