@@ -1,17 +1,19 @@
 import React from 'react';
 import classes from './AddPost.module.css';
 
-const {wrapper, textArea, postForm, sendPost} = classes;
+const { wrapper, textArea, postForm, sendPost } = classes;
 
-const AddPost = () => {
+const AddPost = (props) => {
+  let { onSendBTNClick, onChangeText, text } = props;
+
   return (
     <div className={wrapper}>
       <div className={postForm}>
         <div className={textArea}>
-          <textarea name="postText"/>
+          <textarea onChange={onChangeText} value={text}/>
         </div>
         <div className={sendPost}>
-          <button>Send</button>
+          <button onClick={onSendBTNClick}>Send</button>
         </div>
       </div>
     </div>
