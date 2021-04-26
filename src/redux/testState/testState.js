@@ -33,7 +33,11 @@ let state = {
       ],
       newPostText: ''
     },
-    friends: []
+    friends: [],
+    messages: {
+      allMessages:[],
+      newMessageText:''
+    }
   }
 }
 

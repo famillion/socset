@@ -3,17 +3,20 @@ import classes from './AddPost.module.css';
 
 const { wrapper, textArea, postForm, sendPost } = classes;
 
-const AddPost = (props) => {
-  let { onSendBTNClick, onChangeText, text } = props;
+const AddPost = ({ newPost, actions: { onSendBTN, onChangeText } }) => {
 
   return (
     <div className={wrapper}>
       <div className={postForm}>
         <div className={textArea}>
-          <textarea onChange={onChangeText} value={text}/>
+          <textarea onChange={onChangeText} wrap="hard" cols="5"
+                    value={newPost}/>
         </div>
         <div className={sendPost}>
-          <button onClick={onSendBTNClick}>Send</button>
+          <button
+            onClick={() => onSendBTN()}>
+            Send
+          </button>
         </div>
       </div>
     </div>

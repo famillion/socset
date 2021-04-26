@@ -1,11 +1,15 @@
 import React from 'react';
 import classes from './SinglePost.module.css';
+import { useDispatch } from "react-redux";
+import { likePost } from "../../../../redux/posts/postsActions";
 
 const { wrapper, author, avatar, name, timeDate, post, footer, btns } = classes;
 
 const SinglePost = (props) => {
 
-  const { avatarURL, username, body, likesCount, commentsCount, time, date } = props.post;
+  const { id, avatarURL, username, body, likesCount, commentsCount, time, date } = props.post;
+
+  const action = useDispatch();
 
   return (
     <div className={wrapper}>
@@ -30,7 +34,12 @@ const SinglePost = (props) => {
       </div>
       <div className={footer}>
         <div className={btns}>
-          <button>Like {likesCount}</button>
+          <button
+            onClick={() => {
+              action(likePost(id))
+            }}>
+            Like {likesCount}
+          </button>
           <button>Comments {commentsCount}</button>
         </div>
       </div>

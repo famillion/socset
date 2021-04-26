@@ -1,4 +1,0 @@
-export default {
-  ADD_NEW_POST: 'ADD_NEW_POST',
-  UPDATE_NEW_POST: 'UPDATE_NEW_POST',
-};

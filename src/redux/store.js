@@ -1,10 +1,12 @@
 import { combineReducers, createStore } from "redux";
-import postsReducer from "./reducers/postsReducer";
+import postsReducer from "./posts/postsReducer";
+import { messageReducer } from "./messages/messagesReducer";
 
 const reducers = combineReducers({
-  postsReducer
+  postsReducer,
+  messageReducer
 });
 
-export let store = createStore(reducers);
+let store = createStore(reducers);
 
-// export default store;
+export default store;
