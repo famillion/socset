@@ -1,5 +1,6 @@
 .wrapper {
     max-width: 370px;
+    align-self: center;
     display: grid;
     grid-template-rows: repeat(auto-fit, min-content 30px);
     grid-template-columns: 60px auto;
@@ -28,10 +29,12 @@
 }
 
 .messageText {
+    max-width: 290px;
     grid-row: 1;
     grid-column: 2;
     text-align: start;
     padding: 5px 10px 0 0;
+    word-wrap: break-word;
 }
 
 .timeField {

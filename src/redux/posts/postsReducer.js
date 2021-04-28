@@ -1,31 +1,28 @@
 import initialState from '../testState/testState';
-import constants from './postsActions';
+import { ADD_NEW_POST, UPDATE_NEW_POST, LIKE_POST }  from './postsActions';
 
 let initPostsState = initialState.homepage.posts
-
-const { ADD_NEW_POST, UPDATE_NEW_POST, LIKE_POST } = constants;
 
 const postsReducer = (state = initPostsState, action) => {
 
   switch (action.type) {
     case ADD_NEW_POST:
-      action.payout.body = state.newPostText;
-      state.allPosts.push(action.payout);
+      action.payload.body = state.newPostText;
 
       return {
         ...state,
-        allPosts: [...state.allPosts],
+        allPosts: [...state.allPosts, action.payload],
         newPostText: ''
       };
 
     case UPDATE_NEW_POST:
       return {
         ...state,
-        newPostText: action.payout
+        newPostText: action.payload
       };
     case LIKE_POST:
-      state.allPosts.map(post=> {
-        if(post.id === action.payout){
+      state.allPosts.forEach(post=> {
+        if(post.id === action.payload){
           post.likesCount++;
         }
       })

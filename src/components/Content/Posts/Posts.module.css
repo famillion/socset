@@ -1,9 +1,11 @@
 .wrapper{
+    width: 550px;
     display: grid;
     grid-gap: 10px;
 }
 
 .addPost{
+    width: 550px;
     grid-row: 1;
     background-color: #dcf1f1;
     border-radius: 10px;

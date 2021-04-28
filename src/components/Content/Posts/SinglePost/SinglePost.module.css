@@ -1,5 +1,5 @@
 .wrapper{
-    width: 100%;
+    width: 550px;
     display: grid;
     grid-template-rows: 65px min-content 50px;
     box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
@@ -47,12 +47,13 @@
 }
 
 .post{
-    width: 80%;
+    width: 440px;
     justify-self: center;
     font-size: 18px;
     padding: 10px;
     border-top: 1px solid #04b58d;
     border-bottom: 1px solid #04b58d;
+    word-wrap: break-word;
 }
 
 .footer{

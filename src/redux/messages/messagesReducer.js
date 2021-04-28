@@ -1,26 +1,23 @@
 import initialState from './../testState/testState';
-import constants from './messagesActions';
+import { ADD_NEW_MESSAGE, UPDATE_NEW_MESSAGE } from './messagesActions';
 
 const initMessageState = initialState.homepage.messages;
-
-const { ADD_NEW_MESSAGE, UPDATE_NEW_MESSAGE } = constants;
 
 export const messageReducer = (state = initMessageState, action) => {
 
   switch (action.type) {
     case ADD_NEW_MESSAGE:
-      action.payout.body = state.newMessageText;
-      state.allMessages.push(action.payout);
+      action.payload.body = state.newMessageText;
 
       return {
         ...state,
-        allMessages: [...state.allMessages],
+        allMessages: [...state.allMessages, action.payload],
         newMessageText: ''
       }
     case UPDATE_NEW_MESSAGE:
       return {
         ...state,
-        newMessageText: action.payout
+        newMessageText: action.payload
       }
     default:
       return state;

@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import classes from './MessagesBlock.module.css';
 import AddPost from "../../Posts/AddPost/AddPost";
 import MessageItem from "./MessageItem/MessageItem";
 import { useDispatch, useSelector } from "react-redux";
 import { addNewMessage, updateNewMessage } from "../../../../redux/messages/messagesActions";
 
-const { wrapper, messages, addMessage } = classes;
+const { wrapper, messages, addMessage, nullMessage } = classes;
 
 const MessagesBlock = () => {
 
   const { allMessages, newMessageText } = useSelector(({messageReducer}) => messageReducer);
   const actions = useDispatch();
+  const massageBlock = useRef(null);
+
+  useEffect(() => {
+    massageBlock.current.scrollTop = massageBlock.current.scrollHeight;
+  });
 
   const onSendBTN = () =>{
     const testMessage = {
-      id: 1,
+      id: Math.random()*100000000,
       user_id: 1,
       username: 'Elon Mask',
       time: '17:45',
@@ -32,7 +37,8 @@ const MessagesBlock = () => {
 
   return (
     <div className={wrapper}>
-      <div className={messages}>
+      <div className={messages} ref={massageBlock}>
+        <div className={nullMessage}></div>
         {
           allMessages.map(message => <MessageItem message={message} key={message.id}/>)
         }

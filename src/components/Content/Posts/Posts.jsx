@@ -19,7 +19,7 @@ const Posts = () => {
 
   const onSendBTN = () => {
     const testPost = {
-      id: 3,
+      id: Math.random()*100000000,
       user_id: 1,
       username: 'Elon Mask',
       time: '17:45',

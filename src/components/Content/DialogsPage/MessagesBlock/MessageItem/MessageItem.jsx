@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './MessageItem.module.css';
+import store from "../../../../../redux/store";
 
 const { wrapper, messageText, timeField, avatar, rightOrientation, leftOrient } = classes;
 
